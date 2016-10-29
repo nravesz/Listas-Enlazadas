@@ -48,10 +48,9 @@ class ListaEnlazada:
             nodo.prox = nodo_nuevo
         self.len = self.len + 1
     def extend(self,otro):
-        copia = ListaEnlazada()
         nodo = otro.prim
-        while nodo:
-            copia.append(nodo.dato)
+        while nodo!=None:
+            self.append(nodo.dato)
             nodo = nodo.prox
 
 class _IteradorListaEnlazada:
