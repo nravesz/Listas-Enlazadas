@@ -14,6 +14,8 @@ class ListaEnlazada:
         act = self.prim
         while act:
             r = r + str(act.dato) + ","
+            act = act.prox
+        r = r.rstrip(",")
         return r + "]"
     def __len__(self):
         return self.len
@@ -49,7 +51,7 @@ class ListaEnlazada:
         self.len = self.len + 1
     def extend(self,otro):
         nodo = otro.prim
-        while nodo!=None:
+        while nodo.prox!=None:
             self.append(nodo.dato)
             nodo = nodo.prox
 
