@@ -43,7 +43,7 @@ class ListaEnlazada:
         if nodo == None:
             self.prim = nodo_nuevo
         else:
-            while nodo.prox! = None:
+            while nodo.prox is not None:
                 nodo = nodo.prox
             nodo.prox = nodo_nuevo
         self.len = self.len + 1
